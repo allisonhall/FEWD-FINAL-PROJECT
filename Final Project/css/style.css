@@ -1,0 +1,255 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+a{
+  color:#fff;
+  text-decoration: none;
+}
+
+a:active {
+    font-weight:bold;
+}
+
+body, #nav, #honey{
+  color:#222;
+  font-family: 'Droid Sans';
+}
+
+p{
+  font-size: 1.2em;
+  line-height: 1.35em;
+}
+
+#intro{
+    font-family: 'Droid Sans';
+    font-weight: 400;
+    font-size: 1.25em;
+    max-width: 600px;
+    color:#fff;
+    text-align:center;
+    margin:auto;
+    border: 15px solid black;
+}
+
+ul{
+    font-family: 'Graduate';
+    font-weight: 400;
+    font-size:16px; 
+}
+
+h1{
+  font-family:'Graduate';
+  font-size:2em;
+  margin:0 auto;
+  color: white;
+}
+
+h2{
+  font-family:'Droid Sans'; 
+  font-size:2em;
+} 
+
+h3{
+  font-weight:normal;
+}
+
+h4{
+  font-size:1.2em;
+  font-weight:600;
+}
+
+.bold{
+  font-weight:600;
+}
+
+#fix-nav{
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:10;
+}
+
+#nav{
+  width:50%;
+  position:fixed;
+  left:0;
+  padding-left: 50px;
+}
+
+#nav ul{
+  display:block;
+  padding-top: 550px;
+}
+
+#nav li{
+  list-style:none;
+  line-height:1.35em;
+  padding:0;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.masthead {
+  display:flex;
+  position:relative;
+  height:100%;
+  background-color:steelblue;
+  z-index: 999;
+}
+
+.container{
+  display:block;
+  height:100%;
+}
+
+.honey{
+  width:70%;
+  margin-left:10%;
+}
+
+#section-one, #section-two, #section-three, #section-four,
+#section-five, #section-six, #section-seven{
+  height:100vh;
+  width: 70%;
+  margin-top:40%;
+}
+
+#section-seven {
+  color: white;
+}
+
+img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 25px;
+  width:  800px;
+  height: 500px;
+}
+
+.flip-container {
+  perspective: 1000px;
+}
+  /* flips when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  max-width: 100%;
+  height: 480px;
+  padding-left: 100px;
+  margin-top: -25px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/******************************************
+/* MEDIA QUERY
+/*******************************************/
+
+/*@media (max-width:768px){
+
+#nav, #flex-fix{
+  display:none;
+}
+
+
+#intro{
+  text-align:center;
+  margin:auto;
+  margin-left:10%;
+  margin-right:10%;
+  max-width:768px;
+}
+
+#section-one, #section-two, #section-three, #section-four,
+#section-five, #section-six, #section-seven{
+  width: 100%;
+  height: 100%;
+}
+
+p, #intro, h4{
+  font-size:2em;
+}
+
+h1, h2, h3{
+  font-size: 3em;
+}
+
+.honey{
+  margin-left:10%;
+  margin-right:10%;
+  width:100%;
+}*/
+
+
+/*end media query*/
+}
+
+
